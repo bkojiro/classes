@@ -41,24 +41,27 @@ void ADD(vector<media*> &vect) {
   cin.get(whatMedia, 21);
   cin.get();
   if (strcmp(whatMedia, "VIDEOGAMES") == 0) {
-    char* tempTitle[80];
-    int tempYear;
-    char* tempPub[80];
-    int tempRating;
+    videogames* tempVideogame = new videogames();
     cout << "Enter the title" << endl << "> ";
-    cin.get(*tempTitle, 81);
+    cin.get(tempVideogame->title, 81);
     cin.get();
     cout << "Enter the year of release" << endl << "> ";
-    cin >> tempYear;
+    cin >> tempVideogame->year;
     cin.ignore();
     cout << "Enter the name of the publisher" << endl << "> ";
-    cin.get(*tempPub, 81);
+    cin.get(tempVideogame->publisher, 81);
     cin.get();
     cout << "Enter the rating" << endl << "> ";
-    cin >> tempRating;
+    cin >> tempVideogame->rating;
     cin.ignore();
-    videogames* tempVideogame = new videogames(tempTitle, tempYear, tempPub, tempRating);
-    vect.pushback(tempVideogame);
-    cout << vect[0]->tempTitle;
+    vect.push_back(tempVideogame);
+  } else if (strcmp(whatMedia, "MUSIC") == 0) {
+
+
+-UU-:**-  F1  music.h        All   L14   Git-master  (C++//l Abbrev) -----------
+
+    
+  } else if (strcmp(whatMedia, "MOVIES") == 0) {
+    
   }
 }

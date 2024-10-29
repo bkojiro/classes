@@ -41,24 +41,55 @@ void ADD(vector<media*> &vect) {
   cin.get(whatMedia, 21);
   cin.get();
   if (strcmp(whatMedia, "VIDEOGAMES") == 0) {
-    char* tempTitle[80];
-    int tempYear;
-    char* tempPub[80];
-    int tempRating;
+    videogames* tempVideogame = new videogames();
     cout << "Enter the title" << endl << "> ";
-    cin.get(*tempTitle, 81);
+    cin.get(tempVideogame->title, 81);
     cin.get();
     cout << "Enter the year of release" << endl << "> ";
-    cin >> tempYear;
+    cin >> tempVideogame->year;
     cin.ignore();
     cout << "Enter the name of the publisher" << endl << "> ";
-    cin.get(*tempPub, 81);
+    cin.get(tempVideogame->publisher, 81);
     cin.get();
     cout << "Enter the rating" << endl << "> ";
-    cin >> tempRating;
+    cin >> tempVideogame->rating;
     cin.ignore();
-    videogames* tempVideogame = new videogames(tempTitle, tempYear, tempPub, tempRating);
-    vect.pushback(tempVideogame);
-    cout << vect[0]->tempTitle;
+    vect.push_back(tempVideogame);
+  } else if (strcmp(whatMedia, "MUSIC") == 0) {
+    music* tempMusic = new music();
+    cout << "Enter the name" << endl << "> ";
+    cin.get(tempMusic->title, 81);
+    cin.get();
+    cout << "Enter the year of release" << endl << "> ";
+    cin >> tempMusic->year;
+    cin.ignore();
+    cout << "Enter the artist" << endl << "> ";
+    cin.get(tempMusic->artist, 81);
+    cin.get();
+    cout << "Enter the duration (min:secs)" << endl << "> ";
+    cin.get(tempMusic->duration, 21);
+    cin.get();
+    cout << "Enter the name of the publisher" << endl << "> ";
+    cin.get(tempMusic->publisher, 81);
+    cin.get();
+    vect.push_back(tempMusic);
+  } else if (strcmp(whatMedia, "MOVIES") == 0) {
+    movies* tempMovie = new movies();
+    cout << "Enter the title" << endl << "> ";
+    cin.get(tempMovie->title, 81);
+    cin.get();
+    cout << "Enter the year of release" << endl << "> ";
+    cin >> tempMovie->year;
+    cin.ignore();
+    cout << "Enter the name of the director" << endl << "> ";
+    cin.get(tempMovie->director, 81);
+    cin.get();
+    cout << "Enter the duration of the movie" << endl << "> ";
+    cin.get(tempMovie->duration, 21);
+    cin.get();
+    cout << "Enter the rating" << endl << "> ";
+    cin >> tempVideogame->rating;
+    cin.ignore();
+    vect.push_back(tempMovie);
   }
 }
