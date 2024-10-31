@@ -1,9 +1,0 @@
-#include <iostream>
-#include "media.h"
-
-using namespace std;
-
-class videogames : public media {
- public:
-  videogames();
-};

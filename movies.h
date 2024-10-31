@@ -12,4 +12,5 @@ class movies : public media {
   char* getDirector();
   char* getDuration();
   int getRating();
+  virtual void printInfo();
 };

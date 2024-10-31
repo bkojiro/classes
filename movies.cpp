@@ -20,3 +20,7 @@ char* movies::getDuration() {
 int movies::getRating() {
   return rating;
 }
+
+void movies::printInfo() {
+  cout << getTitle() << " (" << getDuration() << ") by director " << getDirector() << ", released " << getYear() << ", " << getRating() << " stars" << endl;
+}

@@ -16,3 +16,7 @@ char* videogames::getPublisher() {
 int videogames::getRating() {
   return rating;
 }
+
+void videogames::printInfo() {
+  cout << getTitle() << ", released " << getYear() << " by " << getPublisher() << ", rated " << getRating() << " stars" << endl;
+}

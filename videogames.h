@@ -14,6 +14,7 @@ class videogames : public media {
   int getRating();
   char* publisher;
   int rating;
+  virtual void printInfo();
 };
 
 #endif

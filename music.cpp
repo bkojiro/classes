@@ -20,3 +20,7 @@ char* music::getDuration() {
 char* music:: getPublisher() {
   return publisher;
 }
+
+void music::printInfo() {
+  cout << getTitle() << " (" << getDuration() << ") by " << getArtist() << ", released " << getYear() << " by " << getPublisher() << endl;
+}
